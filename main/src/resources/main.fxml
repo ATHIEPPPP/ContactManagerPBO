@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.contactmanager.controller.MainController">
+    <center>
+        <TableView fx:id="contactTable">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Name"/>
+                <TableColumn fx:id="emailColumn" text="Email"/>
+                <TableColumn fx:id="phoneColumn" text="Phone"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="center">
+            <Button text="New" onAction="#handleNewContact"/>
+            <Button text="Edit" onAction="#handleEditContact"/>
+            <Button text="Delete" onAction="#handleDeleteContact"/>
+        </HBox>
+    </bottom>
+</BorderPane>
